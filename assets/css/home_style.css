@@ -1,0 +1,173 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+header {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
+    text-align: center; /* Center the text in the header */
+    padding: 20px;
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: space-between; /* Space between logo and text */
+}
+
+header .logo {
+    width: 50px; /* Adjust the size of the logo */
+    height: auto;
+    vertical-align: middle; /* Ensure the logo is aligned with the text */
+    margin-right: 15px; /* Adds space between logo and text */
+    border-radius: 11px;
+}
+
+header .header-text {
+    text-align: center; /* Keep the header text centered */
+    flex-grow: 1; /* Allow the text section to take up remaining space */
+}
+
+header h1 {
+    margin: 0;
+    display: inline-block; /* Make the title appear next to the logo */
+}
+
+header p {
+    margin: 5px 0;
+}
+
+/* Menu container styling */
+.menu-container {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 40px; /* Space below the menu */
+    background-color: #f4f4f4; /* Light background color for contrast */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding around the menu */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for separation */
+    display: flex; /* Use flexbox for centering content */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Horizontally center content */
+    justify-content: center; /* Vertically center content */
+    text-align: center; /* Center text */
+}
+
+/* Menu heading styling */
+.menu-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px; 
+    text-align: center; /* Ensure the text is centered */
+}
+
+/* Menu list styling */
+.menu {
+    display: flex;
+    justify-content: space-around; /* Distribute menu items evenly */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Make sure the menu spans the entire width */
+}
+
+/* Menu items styling */
+.menu li {
+    margin: 0 15px; /* Space between items */
+}
+
+.menu a {
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for menu items */
+.menu a:hover {
+    background-color: #4facfe; /* Blue background on hover */
+    color: white; /* Change text color on hover */
+}
+
+/* Active menu item (if needed) */
+.menu a.active {
+    background-color: #1196d8; /* Highlight active link */
+    color: white;
+}
+
+.form-container, .menu-container, .task-container {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4facfe;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0e85ca;
+}
+
+.menu {
+    list-style: none;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu li {
+    margin: 5px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #4facfe;
+    padding: 10px;
+    border: 1px solid #4facfe;
+    border-radius: 5px;
+}
+
+.menu a:hover {
+    background-color: #4facfe;
+    color: white;
+}
+
+/* Footer Section */
+.footer {
+    background: #4facfe;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

@@ -1,0 +1,195 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+header {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
+    text-align: center; /* Center the text in the header */
+    padding: 20px;
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: space-between; /* Space between logo and text */
+}
+
+header .logo {
+    width: 50px; /* Adjust the size of the logo */
+    height: auto;
+    vertical-align: middle; /* Ensure the logo is aligned with the text */
+    margin-right: 15px; /* Adds space between logo and text */
+    border-radius: 11px;
+}
+
+header .header-text {
+    text-align: center; /* Keep the header text centered */
+    flex-grow: 1; /* Allow the text section to take up remaining space */
+}
+
+header h1 {
+    margin: 0;
+    display: inline-block; /* Make the title appear next to the logo */
+}
+
+header p {
+    margin: 5px 0;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: white;
+    color: #4facfe;
+    border: 2px solid white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #00f2fe;
+    color: white;
+}
+
+/* Features Section */
+.features {
+    background: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.features h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    flex: 1 1 30%;
+    padding: 20px;
+    background: #f0f0f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+    margin-bottom: 10px;
+    color: #4facfe;
+}
+
+.feature p {
+    margin: 0;
+}
+
+/* Task Management Section */
+main {
+    padding: 20px;
+}
+
+.form-container, .menu-container, .task-container {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4facfe;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0e85ca;
+}
+
+.menu {
+    list-style: none;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu li {
+    margin: 5px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #4facfe;
+    padding: 10px;
+    border: 1px solid #4facfe;
+    border-radius: 5px;
+}
+
+.menu a:hover {
+    background-color: #4facfe;
+    color: white;
+}
+
+/* Footer Section */
+.footer {
+    background: #4facfe;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Authentication Section */
+.auth-options {
+    background-color: #f4f4f9;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.auth-options .btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 30px;
+    font-size: 16px;
+    background-color: #4facfe;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.auth-options .btn:hover {
+    background-color: #1196d8;
+}

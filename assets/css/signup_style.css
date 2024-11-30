@@ -1,0 +1,122 @@
+/* Header styles */
+header {
+    width: 100%;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Container */
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+/* Signup container */
+.signup-container {
+    margin-top: 50px; /* Adjusted margin to give space from the non-fixed header */
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    background: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form heading */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 20px); /* Ensure input width respects container padding */
+    padding: 10px;
+    margin: 0 auto;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Submit button */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4facfe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #1196d8;
+}
+
+/* Login link */
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #4facfe;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+    background-color: #4facfe;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    color: white;
+    border-top: 1px solid #ddd;
+    width: 100%;
+}
+
+header .logo {
+    width: 50px; /* Adjust the size of the logo */
+    height: auto;
+    vertical-align: middle; /* Ensure the logo is aligned with the text */
+    margin-right: 15px; /* Adds space between logo and text */
+    border-radius: 11px;
+}

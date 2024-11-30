@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../assets/css/home_style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <!-- Logo added here -->
+            <a href="../home/index.html"><img src="../assets/images/logo.png" alt="The Time Learner Logo" class="logo"></a>
+            <h1>Welcome to The Time Learner</h1>
+            <p>Organize your tasks efficiently and boost your productivity!</p>
+        </div>
+    </header>
+
+    <!-- Tasks Section -->
+    <main id="tasks">
+        <!-- Navigation Menu -->
+        <div class="menu-container">
+            <h2>Task Menu</h2>
+            <ul class="menu">
+                <li><a href="#add-task">Add Task</a></li>
+                <li><a href="#active-tasks">Active Task</a></li>
+                <li><a href="#completed-tasks">Completed Tasks</a></li>
+            </ul>
+        </div>
+
+        <!-- Add Task Section -->
+        <div id="add-task" class="form-container">
+            <h2>Add Task</h2>
+            <form>
+                <label for="task-title">Task Title</label>
+                <input type="text" id="task-title" name="task-title" placeholder="Enter the title of the task" required />
+
+                <label for="task-desc">Task Description</label>
+                <input type="text" id="task-desc" name="task-desc" placeholder="Enter the description of the task" required />
+
+                <label for="task-reminder">Task Reminder</label>
+                <select id="task-reminder" name="task-reminder">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+
+                <label for="start-timestamp">Start Timestamp</label>
+                <input type="datetime-local" id="start-timestamp" name="start-timestamp" required />
+
+                <label for="end-timestamp">End Timestamp</label>
+                <input type="datetime-local" id="end-timestamp" name="end-timestamp" required />
+
+                <button type="submit">Add Task</button>
+            </form>
+        </div>
+
+        <!-- Active Tasks Section -->
+        <div id="active-tasks" class="task-container">
+            <h2>Active Tasks</h2>
+            <p>View all active tasks.</p>
+            <ul id="active-task-list">
+            </ul>
+        </div>
+
+        <!-- Completed Tasks Section -->
+        <div id="completed-tasks" class="task-container">
+            <h2>Completed Tasks</h2>
+            <p>View all completed tasks.</p>
+            <ul id="completed-task-list">
+            </ul>
+        </div>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 To-Do List App | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
