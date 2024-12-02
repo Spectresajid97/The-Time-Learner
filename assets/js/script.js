@@ -125,7 +125,7 @@ function updateActiveTasks() {
     activeTasks.forEach(task => {
         const taskItem = document.createElement('li');
         taskItem.id = `task-${task.id}`;
-        taskItem.innerHTML = `
+        taskItem.innerHTML = `    
             <strong>${task.title}</strong>: ${task.description || "No description"}<br>
             <em>Start:</em> ${formatDate(task.startTime)}<br>
             <em>End:</em> ${formatDate(task.endTime)}
@@ -190,7 +190,7 @@ function updateCompletedTasks() {
 
     completedTasks.forEach(task => {
         const taskItem = document.createElement('li');
-        taskItem.innerHTML = `
+        taskItem.innerHTML = `    
             <strong>${task.title}</strong>: ${task.description || "No description"}<br>
             <em>Start:</em> ${formatDate(task.startTime)}<br>
             <em>End:</em> ${formatDate(task.endTime)}
@@ -217,11 +217,31 @@ function clearCompletedTasks() {
     saveTasks(); // Save updated tasks to local storage
 }
 
+// Automatically move tasks to completed if end time has passed
+function checkTaskCompletion() {
+    const now = new Date();
+    tasks.forEach(task => {
+        const endTime = new Date(task.endTime); // Ensure comparing Date objects
+        if (!task.isCompleted && endTime <= now) {
+            task.isCompleted = true;
+            console.log(`Task with ID ${task.id} marked as completed. End Time: ${endTime}, Now: ${now}`); // Debug log
+        }
+    });
+
+    // Save and update UI after checking tasks
+    saveTasks();
+    updateActiveTasks();
+    updateCompletedTasks();
+}
+
 // On page load, load tasks from local storage and update the active task list
 window.addEventListener('load', function() {
     updateActiveTasks(); // Populate task list
     updateCompletedTasks(); // Ensure completed tasks are also loaded
 
-    // Add event listener for the "Clear Completed Tasks" button
+    // Add event listener for clearing completed tasks
     document.getElementById('clear-completed-btn').addEventListener('click', clearCompletedTasks);
+
+    // Start checking tasks every seconds (10,000 ms)
+    setInterval(checkTaskCompletion, 10000);
 });
