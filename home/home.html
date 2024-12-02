@@ -12,11 +12,15 @@
         <div class="container">
             <!-- Logo added here -->
             <a href="../home/index.html"><img src="../assets/images/logo.png" alt="The Time Learner Logo" class="logo"></a>
-            <h1>Welcome to The Time Learner</h1>
-            <p>Organize your tasks efficiently and boost your productivity!</p>
+            <div class="header-text">
+                <h1>Welcome to The Time Learner</h1>
+                <p>Organize your tasks efficiently and boost your productivity!</p>
+                <!-- Live Clock below the text -->
+                <div id="live-clock" class="clock"></div>
+            </div>
         </div>
     </header>
-
+    
     <!-- Tasks Section -->
     <main id="tasks">
         <!-- Navigation Menu -->
@@ -83,5 +87,13 @@
     </footer>
 
     <script src="../assets/js/script.js"></script>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('live-clock').textContent = now.toLocaleString();
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
 </body>
 </html>
