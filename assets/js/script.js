@@ -191,13 +191,15 @@ function updateCompletedTasks() {
     completedTasks.forEach(task => {
         const taskItem = document.createElement('li');
         taskItem.innerHTML = `    
-            <strong>${task.title}</strong>: ${task.description || "No description"}<br>
-            <em>Start:</em> ${formatDate(task.startTime)}<br>
-            <em>End:</em> ${formatDate(task.endTime)}
+            <strong style="text-decoration: line-through;">${task.title}</strong>: 
+            <span style="text-decoration: line-through;">${task.description || "No description"}</span><br>
+            <em>Start:</em> <span style="text-decoration: line-through;">${formatDate(task.startTime)}</span><br>
+            <em>End:</em> <span style="text-decoration: line-through;">${formatDate(task.endTime)}</span>
         `;
         completedTaskList.appendChild(taskItem);
     });
 }
+
 
 // Reset the form
 function resetForm() {
